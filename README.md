@@ -2,6 +2,8 @@
 
 The Natty OS was created with Unity Game Engine.
 
+[Playlist(재생목록)](https://www.youtube.com/playlist?list=PLG6918Ng_f9v0liDU4MT58VY-schv3wDW)
+
 # **Getting Started(시작하기)**
 
 OS Default Password : Test
