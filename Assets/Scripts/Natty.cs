@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -114,7 +115,7 @@ public class Natty : MonoBehaviour
         }
 
         Desktop.showApps(appDatas);
-        Desktop.setBackgroundImage("E:\\UserData\\Images\\ScreenShotAndArt\\QuickElementTitleBkg.png");
+        Desktop.setBackgroundImage(ResourceManager.DEFAULT_BACKGROUND_IMAGE_PATH);
     }
 
     public int StartProcess(Process.Info processInfo, GameObject contents)
