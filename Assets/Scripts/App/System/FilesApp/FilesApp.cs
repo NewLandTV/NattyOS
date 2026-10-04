@@ -128,7 +128,9 @@ public class FilesApp : App
         {
             if (fileDataName.Equals(currentDirectory.GetFiles()[i].Name))
             {
+#if UNITY_EDITOR
                 Debug.Log($"Select file to {currentDirectory.GetFiles()[i].FullName}");
+#endif
             }
         }
     }
