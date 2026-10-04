@@ -88,13 +88,17 @@ public class Process : MonoBehaviour
     // 최소화 버튼이 눌렸을 때
     public void OnMinimumButtonClick()
     {
+#if UNITY_EDITOR
         print("미구현 - 최소화");
+#endif
     }
 
     // 토글 전체 화면 버튼이 눌렸을 때
     public void OnToggleFullScreenButtonClick()
     {
+#if UNITY_EDITOR
         print("미구현 - 토글 풀 스크린");
+#endif
     }
 
     // 프로세스가 종료되기 전에 호출 됨
@@ -110,12 +114,16 @@ public class Process : MonoBehaviour
     // 진입점 구현
     protected virtual void Main()
     {
+#if UNITY_EDITOR
         print($"프로세스 시작됨 : processIndex == {processIndex}");
+#endif
     }
 
     // 프로세스 종료 구현
     protected virtual void Release()
     {
+#if UNITY_EDITOR
         print($"{processIndex} : 프로세스 반환 됨.");
+#endif
     }
 }

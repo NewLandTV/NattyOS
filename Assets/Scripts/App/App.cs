@@ -10,7 +10,7 @@ public class App : Process
 
         public GameObject contents;
 
-        public Data(int appID, string companyName, string name)
+        public Data(int appID, string companyName, string name, GameObject contents = null)
         {
             this.appID = appID;
             this.companyName = companyName;
@@ -23,6 +23,7 @@ public class App : Process
             appID = data.appID;
             companyName = data.companyName;
             name = data.name;
+            contents = data.contents;
         }
     }
 
@@ -44,14 +45,16 @@ public class App : Process
     protected override void Main()
     {
         base.Main();
-
+#if UNITY_EDITOR
         print($"{data.appID}:{data.companyName}.{data.name}");
+#endif
     }
 
     protected override void Release()
     {
         base.Release();
-
+#if UNITY_EDITOR
         print($"{data.appID}:{data.companyName}.{data.name} ¾Û Á¾·á µÊ.");
+#endif
     }
 }
